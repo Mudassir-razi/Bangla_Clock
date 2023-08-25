@@ -5,12 +5,12 @@ cursorList = [10 15 20 10];
 indexer = "";
 bitmap = "";
 
-defaultData = sprintf('{0, 0, 0, 24, 0, 1}');
-imageNames = "sNBrISm@lUdvhPTuCiQYjqAXRWbnKLkoGHeMzfgcOwtpayxV1234567890%{{D";
+defaultData = sprintf('{0, 0, 0, 5, 0, 1}');
+imageNames = "sNBrISm@lUdvhPTuCiQYjqAXRWbnKLkoGHeMzfgcOwtpayxV1234567890%{{DE";
 
 letterGroup1 = "vsmldhYbnhoezOpxUgyPuCRG";
 letterGroup2 = "NBITiQjqAXWKLHMfctaVD";
-letterGroup3 = "Sw";
+letterGroup3 = "SwE";
 
 asciiStart = 32;
 asciiEnd = 126;

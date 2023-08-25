@@ -1,7 +1,7 @@
 image = imread('letterArray.png');
 image = im2bw(image, 0.5);
 
-imageNames = 'sNBrISm@lUdvhPTuCiQYjqAXRWbnKLkoGHeMzfgcOwtpayxV1234567890%{{D';
+imageNames = 'sNBrISm@lUdvhPTuCiQYjqAXRWbnKLkoGHeMzfgcOwtpayxV1234567890%{{DE';
 
 started = false;
 leftBar = 1;
