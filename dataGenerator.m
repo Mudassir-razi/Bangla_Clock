@@ -1,6 +1,6 @@
 xoffset = 0;
 yoffset = 0;
-advanceCursor = 15;
+cursorList = [10 15 20 10];
 
 indexer = "";
 bitmap = "";
@@ -12,8 +12,6 @@ letterGroup1 = "vsmldhYbnhoezOpxUgyPuCRG";
 letterGroup2 = "NBITiQjqAXWKLHMfctaVD";
 letterGroup3 = "Sw";
 
-cursorList = [10 15 20 10];
-
 asciiStart = 32;
 asciiEnd = 126;
 offset = 0;
@@ -23,9 +21,16 @@ for i = asciiStart: asciiEnd
     
     currentLetter = char(i);
     %determining letter offset
-    
-    
+    lg = 4;
+    if contains(letterGroup1, currentLetter)
+        lg = 1;
+    elseif contains(letterGroup2, currentLetter)
+        lg = 2;
+    elseif contains(letterGroup3, currentLetter)
+        lg = 3;
+    end
     %
+
     if contains(imageNames, currentLetter)
         %push data for this character
         letterName = char(i);
@@ -34,7 +39,7 @@ for i = asciiStart: asciiEnd
         end
         
         letter = imread("output\" + letterName + ".png");
-        data = sprintf('{%d, %d, %d, %d, %d, %d}, //%s\n', offset, width(letter), height(letter), advanceCursor, xoffset, yoffset, letterName);
+        data = sprintf('{%d, %d, %d, %d, %d, %d}, //%s\n', offset, width(letter), height(letter), cursorList(lg), xoffset, yoffset, letterName);
         indexer = indexer + data;
         offset = offset + (width(letter) * height(letter))/8;
         
